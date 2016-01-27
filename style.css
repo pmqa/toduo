@@ -1,0 +1,40 @@
+.weekday {
+    padding: 10px;
+    min-height: 260px;
+    border: 1px solid #eee;
+    margin: 5px;
+}
+.todo {
+    padding: 10px;
+    min-height: 535px;
+    border: 1px solid #eee;
+    margin-top: 5px
+}
+.title-todo {
+    text-align: center;
+    margin-top: 0;
+}
+.week-nav {
+    display: none;
+}
+.week-nav {
+    text-align: center;
+}
+.weeks-navigator {
+    text-align: center;
+}
+.todo .todo-list li {
+    font-size: 18px;
+    padding: 5px;
+    border-bottom: 1px dashed #888;
+}
+.todo .new-todo {
+    margin-bottom: 20px;
+}
+.weekday .todo-list li {
+    font-size:18px;
+    border-bottom: 1px dashed #eee;
+}
+.weekday .todo-list {
+    margin-top: 10px;
+}
