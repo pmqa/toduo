@@ -10,58 +10,58 @@ jQuery(function ($) {
         initCalendar: function () {
 
             //populate calendar
-            $.getJSON('http://localhost/toduo/calendar.php', function (data) {
+            $.getJSON('./backend/calendar.php', function (data) {
                 $.each(data, function (index, value) {
-                    
+
                     index++;
                     var week = '<div class="week-nav" id="week-' + index + '">' +
-                        '<h1>Week ' + index + ', January 2016</h1>'+
+                        '<h1>Week ' + index + ', January 2016</h1>' +
                         '</div>';
 
                     $('.weeks-container').append(week);
 
                 });
-                
-             App.showWeek(1);    
+
+                App.showWeek(1);
             });
-        
+
         },
 
         showWeek: function (w) {
-            
+
             // display current week
-            
+
             App.currentWeek = w;
             var $week = $('.weeks-container #week-' + w);
-            
+
             // hide all weeks
             $('.weeks-container .week-nav').hide();
-            
-            $week.show();            
+
+            $week.show();
             App.showWeeksData(w);
-            
+
         },
 
         currentWeek: 1,
-        
-        showWeeksData: function(w) {
-            
-            var $weekdays = $('.weekdays .weekday');            
-            $weekdays.find('.todo-list').empty();
-            
-            $.getJSON('http://localhost/toduo/api.php?get_week='+w+'&key=peteralmeida', function (data) {     
 
-                $.each(data, function(index,value){
-                    if (data[index].eventos.length > 0) {                        
-                
+        showWeeksData: function (w) {
+
+            var $weekdays = $('.weekdays .weekday');
+            $weekdays.find('.todo-list').empty();
+
+            $.getJSON('1./backend/api.php?get_week=' + w + '&key=peteralmeida', function (data) {
+
+                $.each(data, function (index, value) {
+                    if (data[index].eventos.length > 0) {
+
                         for (var i = 0; i < data[index].eventos.length; i++) {
-                            $weekdays.eq(index-1).find('.todo-list').append('<li>'+data[index].eventos[i]+'</li>');
+                            $weekdays.eq(index - 1).find('.todo-list').append('<li>' + data[index].eventos[i] + '</li>');
                         };
                     }
                 });
-                
+
             });
-            
+
         },
 
         bind: function () {
@@ -75,15 +75,15 @@ jQuery(function ($) {
                 }
             });
 
-            //next and prev    
-            $('.next').click(function(){
-                App.showWeek(App.currentWeek+1); 
-                                
+            //next and prev
+            $('.next').click(function () {
+                App.showWeek(App.currentWeek + 1);
+
             });
-            
-            //next and prev    
-            $('.prev').click(function(){
-                App.showWeek(App.currentWeek-1); 
+
+            //next and prev
+            $('.prev').click(function () {
+                App.showWeek(App.currentWeek - 1);
 
             });
 

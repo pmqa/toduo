@@ -1,77 +1,80 @@
 <html>
-    <head>
-        <title>ToDuo</title>
-       
-        <script src="bower_components/jquery/dist/jquery.min.js"></script>
-        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-           
-           <div class="container">
-             
-             <div class="weeks">
-             
-             <div class="weeks-container"></div>
+
+<head>
+    <title>ToDuo</title>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="frontend/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="weeks">
+
+            <div class="weeks-container"></div>
             <div class="weeks-navigator">
-                  <a href="#" class="prev">&larr; prev</a>
-                  <a href="#" class="next">next &rarr;</a>
+                <a href="#" class="prev">&larr; prev</a>
+                <a href="#" class="next">next &rarr;</a>
             </div>
-               
-             </div>
-              
-               <div class="row">
-                   <div class="col-sm-4 todo">
-                       <h2 class="title-todo">Todo</h2>
-                       <form class="form-group">
-                           <input type="text" class="form-control new-todo">
-                           <ul class="todo-list"></ul>    
-                       </form>
-                       
-                   </div>
-                   <div class="col-sm-8">
-                       <div class="weekdays row">
-                           <div class="col-sm-3 weekday">
-                              <h3>Mon</h3>
-                               <input type="text" class="new-todo form-control"> 
-                               <ul class="todo-list"></ul>                                
-                           </div>
-                           <div class="col-sm-3 weekday">
-                              <h3>Tue</h3>
-                               <input type="text" class="new-todo form-control">
-                               <ul class="todo-list"></ul>                         
-                           </div>
-                           
-                          <div class="col-sm-3 weekday">
-                              <h3>Wed</h3>
-                               <input type="text" class="new-todo form-control">
-                              <ul class="todo-list"></ul>                          
-                           </div>
-                           
-                          <div class="col-sm-3 weekday">
-                              <h3>Thu</h3>
-                               <input type="text" class="new-todo form-control">
-                              <ul class="todo-list"></ul>                        
-                           </div>
-                           
-                          <div class="col-sm-3 weekday">
-                              <h3>Fri</h3>
-                               <input type="text" class="new-todo form-control">
-                              <ul class="todo-list"></ul>                           
-                           </div>
-                           
-                          <div class="col-sm-3 weekday">
-                              <h3>Sat</h3>
-                               <input type="text" class="new-todo form-control">
-                              <ul class="todo-list"></ul>                           
-                           </div>
-                           
-                       </div>
-                   </div>
-               </div>
-           </div>
-            
-        <script src="app.js"></script>        
-    </body>
+
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4 todo">
+                <h2 class="title-todo">Todo</h2>
+                <form class="form-group">
+                    <input type="text" class="form-control new-todo">
+                    <ul class="todo-list"></ul>
+                </form>
+
+            </div>
+            <div class="col-sm-8">
+                <div class="weekdays row">
+                    <div class="col-sm-3 weekday">
+                        <h3>Mon</h3>
+                        <input type="text" class="new-todo form-control">
+                        <ul class="todo-list"></ul>
+                    </div>
+                    <div class="col-sm-3 weekday">
+                        <h3>Tue</h3>
+                        <input type="text" class="new-todo form-control">
+                        <ul class="todo-list"></ul>
+                    </div>
+
+                    <div class="col-sm-3 weekday">
+                        <h3>Wed</h3>
+                        <input type="text" class="new-todo form-control">
+                        <ul class="todo-list"></ul>
+                    </div>
+
+                    <div class="col-sm-3 weekday">
+                        <h3>Thu</h3>
+                        <input type="text" class="new-todo form-control">
+                        <ul class="todo-list"></ul>
+                    </div>
+
+                    <div class="col-sm-3 weekday">
+                        <h3>Fri</h3>
+                        <input type="text" class="new-todo form-control">
+                        <ul class="todo-list"></ul>
+                    </div>
+
+                    <div class="col-sm-3 weekday">
+                        <h3>Sat</h3>
+                        <input type="text" class="new-todo form-control">
+                        <ul class="todo-list"></ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="frontend/app.js"></script>
+</body>
+
 </html>
