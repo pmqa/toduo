@@ -44,20 +44,30 @@ jQuery(function ($) {
 
         currentWeek: 1,
 
+        listDays: [['dom', 'Domingo'], ['seg', 'Segunda'], ['ter', 'Terça'], ['qua', 'Quarta'], ['qui', 'Quinta'], ['sex', 'Sexta'], ['s&aacute;b', 'Sábado']],
+
         showWeeksData: function (w) {
 
-            var $weekdays = $('.weekdays .weekday');
-            $weekdays.find('.todo-list').empty();
+            var $weekdays = $('.weekdays');
+            $weekdays.empty();
 
-            $.getJSON('1./backend/api.php?get_week=' + w + '&key=peteralmeida', function (data) {
+            $.getJSON('./backend/api.php?get_week=' + w + '&key=peteralmeida', function (data) {
+                console.log(data);
 
                 $.each(data, function (index, value) {
-                    if (data[index].eventos.length > 0) {
 
+                    var monthDay = data[index].dia_mes.substr(data[index].dia_mes.length - 2);
+
+                    var weekDay = '<div class="col-sm-3 weekday"><h3>' + App.listDays[data[index].dia_semana][0] + ', ' + monthDay + '</h3></div>';
+                    $weekdays.append(weekDay);
+
+                    /*
+                    if (data[index].eventos.length > 0) {
                         for (var i = 0; i < data[index].eventos.length; i++) {
                             $weekdays.eq(index - 1).find('.todo-list').append('<li>' + data[index].eventos[i] + '</li>');
                         };
                     }
+                    */
                 });
 
             });
